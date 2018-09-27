@@ -3,7 +3,7 @@
 """Taking Inputs"""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 row, column = list(map(int,input().split()))
-print(row,column)
+# print(row,column)
 """Declaring empty lists"""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 
@@ -18,7 +18,7 @@ count = 0
 for i in range(row):
     s = list(input())
     given = given + [s]
-print(given)
+# print(given)
 
 
 for i in range(row):
@@ -57,8 +57,9 @@ for i in range(row):
                 find_size.append(b)
 
                 findings.append(min(find_size))
-        count+=1
-        print(count)
+# count+=1
+# print(count)
+
 print(findings)
 max_size = (max(findings)*4)+1
 print(max_size,"1")
