@@ -34,29 +34,20 @@ for i in input_string:
 print(p1)
 print(p2)
 print(p3)
-# for i in input_string:
-#     if i in group2:
-#         p2.append(i)
-# for i in input_string:
-#     if i in group3:
-#         p3.append(i)
-
-# print(p1,p2,p3)
 """Rotate groups by specified amounts."""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
-
 rp1 = rotate(p1,k1) #rotating by specified amounts
 rp2 = rotate(p2,k2) #rotating by specified amounts
 rp3 = rotate(p3,k3) #rotating by specified amounts
 
 # print(p1,p2,p3)
-# print(rp1,rp2,rp3)
+print(rp1,rp2,rp3)
 decrypted_message="" #Taking empty strings
 
 """"~~~~~~~~~~~~~~~Writing the decrypted_message~~~~~~~~~~~~~~~~~"""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
-for loop in input_string:
-    if (set(loop) & set(group1)):
+for char in input_string:
+    if char in group1:
         for ind,i in enumerate(p1):
             # print(ind,i)
             if i==loop:
