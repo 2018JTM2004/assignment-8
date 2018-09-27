@@ -28,14 +28,26 @@ for loop in group2:
 for loop in group3:
     if( set(loop) & set(input_string)):
         p3.append(loop)
-print(p1)
-print(p2)
-print(p3)
 
-rp1 = rotate(p1,k1)
-rp2 = rotate(p2,k2)
-rp3 = rotate(p3,k3)
+rp1,rp2,rp3 = rotate(p1,k1),rotate(p2,k2),rotate(p3,k3)
 
-print(rp1)
-print(rp2)
-print(rp3)
+decrypted_message=""
+for loop in input_string:
+    if (set(loop) & set(group1)):
+        for ind,i in enumerate(p1):
+            if i==loop:
+                decrypted_message=decrypted_message+rp1[ind]
+    if (set(loop) & set(group2)):
+        for ind,i in enumerate(p2):
+            if i==loop:
+                decrypted_message=decrypted_message+rp2[ind]
+    if (set(loop) & set(group3)):
+        for ind,i in enumerate(p3):
+            if i==loop:
+                decrypted_message=decrypted_message+rp3[ind]
+
+
+print(decrypted_message)
+# print(rp1)
+# print(rp2)
+# print(rp3)
