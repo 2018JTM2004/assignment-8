@@ -1,3 +1,1 @@
-###### this is the first .py file ###########
-
-####### write your code here ##########
+#!/usr/bin/python3
