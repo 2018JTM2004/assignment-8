@@ -24,17 +24,24 @@ group3 = "stuvwxyz_" #Making group3
 """Updating elements from input into different lists."""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 p1,p2,p3=[],[],[]
-for loop in group1:
-    if( set(loop) & set(input_string)):
-        p1.append(loop)
-for loop in group2:
-    if( set(loop) & set(input_string)):
-        p2.append(loop)
-for loop in group3:
-    if( set(loop) & set(input_string)):
-        p3.append(loop)
+for i in input_string:
+    if i in group1:
+        p1.append(i)
+    if i in group2:
+        p2.append(i)
+    if i in group3:
+        p3.append(i)
+print(p1)
+print(p2)
+print(p3)
+# for i in input_string:
+#     if i in group2:
+#         p2.append(i)
+# for i in input_string:
+#     if i in group3:
+#         p3.append(i)
 
-print(p1,p2,p3)
+# print(p1,p2,p3)
 """Rotate groups by specified amounts."""
 """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 
@@ -42,8 +49,8 @@ rp1 = rotate(p1,k1) #rotating by specified amounts
 rp2 = rotate(p2,k2) #rotating by specified amounts
 rp3 = rotate(p3,k3) #rotating by specified amounts
 
-print(p1,p2,p3)
-print(rp1,rp2,rp3)
+# print(p1,p2,p3)
+# print(rp1,rp2,rp3)
 decrypted_message="" #Taking empty strings
 
 """"~~~~~~~~~~~~~~~Writing the decrypted_message~~~~~~~~~~~~~~~~~"""
