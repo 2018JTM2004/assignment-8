@@ -1,3 +1,18 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{problem2}
+BItBucket.
+\newblock {\em Become a git guru.}
+\newblock \url{https://www.atlassian.com/git/tutorials}.
+
+\bibitem{problem3}
+Python 3.7.1rc1 documentation.
+\newblock {\em Python Software Foundation}.
+\newblock \url{https://docs.python.org/3/}.
+
+\bibitem{problem1}
+Tutorials Point.
+\newblock {\em Python Tutorial}.
+\newblock \url{https://www.tutorialspoint.com/python/}.
 
 \end{thebibliography}
