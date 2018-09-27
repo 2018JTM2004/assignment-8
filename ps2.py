@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 def rotate(lst, x):
-    lst[:] =  lst[-x:] + lst[:-x]
+    for i in range(x):
+        lst.insert(0,lst.pop(-1))
+    return lst
 
 
-k1,k2,k3 = input().split(" ") #Taking input values of k1, k2 and k3
+m1,m2,m3 = input().split(" ") #Taking input values of k1, k2 and k3
+k1 = int(m1)
+k2 = int(m2)
+k3 = int(m3)
 input_string = input("Enter the message to be decrypted : ")
 # list_input = list(input_string)
 # print(input_character)
@@ -27,10 +32,10 @@ print(p1)
 print(p2)
 print(p3)
 
-rotate(p1,k1)
-rotate(p2,k2)
-rotate(p3,k3)
+rp1 = rotate(p1,k1)
+rp2 = rotate(p2,k2)
+rp3 = rotate(p3,k3)
 
-print(p1)
-print(p2)
-print(p3)
+print(rp1)
+print(rp2)
+print(rp3)
