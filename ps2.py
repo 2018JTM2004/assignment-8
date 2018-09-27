@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def rotate(lst, x):
+    new=lst.copy()
     for i in range(x):
-        lst.insert(0,lst.pop(-1))
-    return lst
+        new.insert(0,new.pop(-1))
+    return new
 
 
 m1,m2,m3 = input().split(" ") #Taking input values of k1, k2 and k3
@@ -28,13 +29,19 @@ for loop in group2:
 for loop in group3:
     if( set(loop) & set(input_string)):
         p3.append(loop)
+# print(p1,p2,p3)
 
-rp1,rp2,rp3 = rotate(p1,k1),rotate(p2,k2),rotate(p3,k3)
+rp1 = rotate(p1,k1)
+rp2 = rotate(p2,k2)
+rp3 = rotate(p3,k3)
 
+# print(p1,p2,p3)
+# print(rp1,rp2,rp3)
 decrypted_message=""
 for loop in input_string:
     if (set(loop) & set(group1)):
         for ind,i in enumerate(p1):
+            # print(ind,i)
             if i==loop:
                 decrypted_message=decrypted_message+rp1[ind]
     if (set(loop) & set(group2)):
